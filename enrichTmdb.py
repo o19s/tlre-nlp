@@ -1,3 +1,5 @@
+import sys
+import pandas
 import pickle
 import pysolr
 import spacy
@@ -68,11 +70,27 @@ def enrichMovies():
     return total_docs,total_enriched,enrichments
 
 
-t_docs,t_enr,enrichments = enrichMovies()
-print("Total documents:",t_docs)
-print("Total enriched:",t_enr)
-with open("location_enrichments.pickle",'wb') as outfile:
-    pickle.dump({ "enrichments": enrichments }, outfile, protocol=pickle.HIGHEST_PROTOCOL)
+def doEnrichment():
+    t_docs,t_enr,enrichments = enrichMovies()
+    print("Total documents:",t_docs)
+    print("Total enriched:",t_enr)
+    with open("location_enrichments.pickle",'wb') as outfile:
+        pickle.dump({ "enrichments": enrichments }, outfile, protocol=pickle.HIGHEST_PROTOCOL)
+
+
+def generateBlankTestData():
+    ids = []
+    titles = []
+    locations = []
+    for movie in indexableMovies():
+        ids.append(movie["id"])
+        titles.append(movie["title"])
+        locations.append(None)
+    df = pandas.DataFrame({ 'id': ids, 'title' : titles, 'locations': locations }).set_index('id')
+    df.to_csv('test_title_locations.csv')
+
+generateBlankTestData()
+
 
 #solr = pysolr.Solr('http://localhost:8983/solr/tmdb', timeout=100)
 #solr.add(indexableMovies())
