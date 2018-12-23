@@ -58,21 +58,23 @@ def doEnrichment():
 
 def generateBlankTestData():
     ids = []
-    titles = []
-    locations = []
+    texts = []
+    annotations = []
+    notes = []
     for movie in indexableMovies():
         ids.append(movie["id"])
-        titles.append(movie["title"])
-        locations.append(None)
-    df = pandas.DataFrame({ 'id': ids, 'title' : titles, 'locations': locations }).set_index('id')
-    df.to_csv('test_title_locations.csv')
-
-generateBlankTestData()
+        texts.append(movie["title"])
+        annotations.append(None)
+        notes.append(None)
+    df = pandas.DataFrame({ 'id': ids, 'text' : texts, 'annotation': annotations, 'note': notes }).set_index('id')
+    df.to_csv('test_titles_blank.csv')
 
 
 #solr = pysolr.Solr('http://localhost:8983/solr/tmdb', timeout=100)
 #solr.add(indexableMovies())
 
+
+#doEnrichment times:
     # Small Model:
     #Total documents: 27760
     #Total enriched: 1970 (7.1%)
