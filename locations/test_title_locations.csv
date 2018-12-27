@@ -27,7 +27,7 @@ id,text,annotation,note
 128,Princess Mononoke,,
 77338,The Intouchables,,
 539,Psycho,,
-599,Sunset Boulevard,,
+599,Sunset Boulevard,,Streets are too specific
 19542,The Red Shoes,,
 313106,Doctor Who: The Day of the Doctor,,
 101,Leon: The Professional,,
@@ -81,7 +81,7 @@ id,text,annotation,note
 423,The Pianist,,
 149871,The Tale of the Princess Kaguya,,
 336804,Mustang,,
-83564,La luna,,
+83564,La luna,,Not Los Angeles!
 500,Reservoir Dogs,,
 32085,Vincent,,
 92321,Into the Forest of Fireflies' Light,,
@@ -225,7 +225,7 @@ id,text,annotation,note
 213,North by Northwest,,"Direction, not a place"
 310569,The Second Mother,,
 10997,Farewell My Concubine,,
-947,Lawrence of Arabia,,
+947,Lawrence of Arabia,Arabia,
 25376,The Secret in Their Eyes,,
 13413,BURN•E,,
 872,Singin' in the Rain,,
@@ -348,7 +348,7 @@ id,text,annotation,note
 82702,How to Train Your Dragon 2,,
 149870,The Wind Rises,,
 343,Harold and Maude,,
-655,"Paris, Texas","Paris, Texas",Paris is a city in texas
+655,"Paris, Texas",Paris Texas,Paris is a city in texas
 16306,Fantastic Planet,,
 251516,Kung Fury,,
 37797,Whisper of the Heart,,
@@ -416,7 +416,7 @@ id,text,annotation,note
 982,The Manchurian Candidate,,
 27670,Nothing Left to Do but Cry,,
 286217,The Martian,,
-902,The City of Lost Children,,
+902,The City of Lost Children,,Fictional City
 11220,Fallen Angels,,
 40619,Day & Night,,
 3063,Duck Soup,,
@@ -636,7 +636,7 @@ id,text,annotation,note
 11321,Seven Pounds,,
 1654,The Dirty Dozen,,
 3116,Midnight Cowboy,,
-9662,The Triplets of Belleville,,
+9662,The Triplets of Belleville,Belleville,
 41411,The Round Up,,
 12444,Harry Potter and the Deathly Hallows: Part 1,,
 302528,Remember,,
@@ -877,7 +877,7 @@ id,text,annotation,note
 327029,Power/Rangers,,
 293863,The Age of Adaline,,
 1632,Mississippi Burning,Mississippi,
-228203,"McFarland, USA",McFarland,
+228203,"McFarland, USA",McFarland USA,
 46838,Tucker and Dale vs Evil,,
 99,All About My Mother,,
 9461,Enter the Dragon,,
@@ -885,7 +885,7 @@ id,text,annotation,note
 11658,Tae Guk Gi: The Brotherhood of War,,
 10843,After Hours,,
 10377,My Cousin Vinny,,
-675,Harry Potter and the Order of the Phoenix,,
+675,Harry Potter and the Order of the Phoenix,,Not Arizona
 10795,Tell No One,,
 764,The Evil Dead,,
 406385,Smetto quando voglio - Masterclass,,
@@ -899,7 +899,7 @@ id,text,annotation,note
 218,The Terminator,,
 966,The Magnificent Seven,,
 642,Butch Cassidy and the Sundance Kid,,
-242643,Batman: Assault on Arkham,,
+242643,Batman: Assault on Arkham,,Arkham is a fictional prison
 14282,Ninja Scroll,,
 427,Mon oncle,,
 33273,Cell 211,,
@@ -1032,7 +1032,7 @@ id,text,annotation,note
 14375,Romanzo criminale,,
 766,Army of Darkness,,
 312221,Creed,,
-187,Sin City,,
+187,Sin City,,Fictional place
 492,Being John Malkovich,,
 11202,Patton,,
 9495,The Crow,,
@@ -1573,7 +1573,7 @@ id,text,annotation,note
 468,My Own Private Idaho,Idaho,
 10693,Peter Pan,,
 61791,Rise of the Planet of the Apes,,
-6644,El Dorado,,
+6644,El Dorado,El Dorado,
 21588,Cemetery Man,,
 20345,The Bird with the Crystal Plumage,,
 68730,Silence,,
@@ -1961,7 +1961,7 @@ id,text,annotation,note
 4727,The Gendarme of St. Tropez,St. Tropez,France
 35690,The Last Song,,
 348668,A Conspiracy of Faith,,
-652,Troy,,
+652,Troy,Troy,
 10895,Pinocchio,,
 13931,Mike's New Car,,
 36950,You Don't Know Jack,,
