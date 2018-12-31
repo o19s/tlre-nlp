@@ -1,11 +1,11 @@
 import pysolr
 
 
-def indexableMovies():
+def indexableMovies(filename='tmdb_enriched_deduped.json'):
     """ Generates TMDB movies, similar to how ES Bulk indexing
         uses a generator to generate bulk index/update actions """
     from tmdbMovies import tmdbMovies
-    for movieId, tmdbMovie in tmdbMovies():
+    for movieId, tmdbMovie in tmdbMovies(filename):
         print("Indexing %s" % movieId)
         try:
             releaseDate = None
@@ -22,6 +22,10 @@ def indexableMovies():
                    'release_date': releaseDate,
                    'vote_average': tmdbMovie['vote_average'] if 'vote_average' in tmdbMovie else None,
                    'vote_count': int(tmdbMovie['vote_count']) if 'vote_count' in tmdbMovie else None,
+                   'location': tmdbMovie['location'] if 'location' in tmdbMovie else [],
+                   'location_city': tmdbMovie['location_city'] if 'location_city' in tmdbMovie else [],
+                   'location_state': tmdbMovie['location_state'] if 'location_state' in tmdbMovie else [],
+                   'location_country': tmdbMovie['location_country'] if 'location_country' in tmdbMovie else [],                   
                    }
         except KeyError as k: # Ignore any movies missing these attributes
             print(k)
@@ -30,4 +34,4 @@ def indexableMovies():
 
 if __name__ == "__main__":
     solr = pysolr.Solr('http://localhost:8983/solr/tmdb', timeout=100)
-    solr.add(indexableMovies())
+    solr.add(indexableMovies(filename='tmdb_enriched_deduped.json'))

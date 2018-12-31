@@ -1,24 +1,24 @@
 import json
 
 
-def rawTmdbMovies():
-    return json.load(open('tmdb.json'))
+def rawTmdbMovies(filename):
+    return json.load(open(filename))
 
 
 def writeTmdmMovies(rawMoviesJson, path):
     with open(path, 'w') as f:
         json.dump(rawMoviesJson, f)
 
-def tmdbMovies():
-    tmdbMovies = rawTmdbMovies()
+def tmdbMovies(filename='tmdb.json'):
+    tmdbMovies = rawTmdbMovies(filename)
     for movieId, tmdbMovie in tmdbMovies.items():
         yield (movieId, tmdbMovie)
 
 
-def indexableMovies():
+def indexableMovies(filename='tmdb.json'):
     """ Generates TMDB movies, similar to how ES Bulk indexing
         uses a generator to generate bulk index/update actions """
-    for movieId, tmdbMovie in tmdbMovies():
+    for movieId, tmdbMovie in tmdbMovies(filename):
         try:
             releaseDate = None
             if 'release_date' in tmdbMovie and len(tmdbMovie['release_date']) > 0:

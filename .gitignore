@@ -106,3 +106,4 @@ venv.bak/
 #tmdb
 tmdb.json
 tmdb_spacy.json
+tmdb*.json
