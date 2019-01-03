@@ -1,0 +1,19 @@
+{
+  "name": "map",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "geostats": "^1.7.0",
+    "jquery": "^3.3.1",
+    "leaflet": "^1.4.0",
+    "leaflet-solr-heatmap": "^0.3.0",
+    "leaflet.heat": "^0.2.0",
+    "leaflet.markercluster": "^1.4.1"
+  }
+}

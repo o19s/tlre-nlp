@@ -107,3 +107,5 @@ venv.bak/
 tmdb.json
 tmdb_spacy.json
 tmdb*.json
+
+.DS_Store
