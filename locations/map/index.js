@@ -18,7 +18,7 @@ var solr = L.solrHeatmap('http://127.0.0.1:8983/solr/tmdb', {
 
   // Set type of visualization. Allowed types: 'geojsonGrid', 'clusters' Note: 'clusters' requires LeafletMarkerClusterer
   type: 'geojsonGrid',
-  // type: 'clusters',
+  //type: 'heatmap',
 
   // Inherited from L.GeoJSON
   onEachFeature: onEachFeature
@@ -52,4 +52,4 @@ solr.on('nearbyQueried', function(data) {
 });
 
 
-//http://127.0.0.1:8983/solr/tmdb/select?location&json.wrf=jQuery33107168202815042635_1546539949092&q=*%3A*&wt=json&facet=true&facet.heatmap=location&facet.heatmap.geom=%5B"-180%20-90"%20TO%20"180%2090"%5D&fq=location%3A"Intersects(ENVELOPE(-180%2C%20180%2C%2090%2C%20-90))"&_=1546539949093
+//http://127.0.0.1:8983/solr/tmdb/select?location_rpt&json.wrf=jQuery33107168202815042635_1546539949092&q=*%3A*&wt=json&facet=true&facet.heatmap=location_rpt&facet.heatmap.geom=%5B"-180%20-90"%20TO%20"180%2090"%5D&fq=location_rpt%3A"Intersects(ENVELOPE(-180%2C%20180%2C%2090%2C%20-90))"&_=1546539949093

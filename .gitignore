@@ -109,3 +109,8 @@ tmdb_spacy.json
 tmdb*.json
 
 .DS_Store
+
+
+#Node Modules
+node_modules/
+package-lock.json
