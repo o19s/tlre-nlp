@@ -114,3 +114,7 @@ tmdb*.json
 #Node Modules
 node_modules/
 package-lock.json
+train/tmdb_query_model*
+transformers/temp
+transformers/vectors
+temp/
